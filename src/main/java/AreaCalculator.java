@@ -1,17 +1,9 @@
 public class AreaCalculator {
 
-    public static double calculateArea(Object[] objects) {
+    public static double calculateArea(Shape[] shapes) {
         double totalArea = 0;
-        for (Object obj : objects) {
-            if (obj instanceof Circle) {
-                Circle circle = (Circle) obj;
-                totalArea = totalArea + Math.pow(circle.getRadius(), 2) * Math.PI;
-            } else if (obj instanceof Rectangle) {
-                Rectangle rectangle = (Rectangle) obj;
-                totalArea += rectangle.getWidth() * rectangle.getHeight();
-            }
-            //ignore if not one of these shapes
-
+        for (Shape shape : shapes) {
+            totalArea += shape.getArea();
         }
         return totalArea;
     }

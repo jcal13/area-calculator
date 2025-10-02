@@ -14,9 +14,9 @@ class AreaCalculatorTest {
 
     @Test
     void calculateAreaMixed() {
-        Object[] objects = new Object[2];
-        objects[0] = new Rectangle(5, 5);
-        objects[1] = new Circle(5);
-        assertEquals( 25 + 25 * Math.PI, AreaCalculator.calculateArea(objects), 0);
+        Shape[] shapes = new Shape[2];
+        shapes[0] = new Rectangle(5, 5);
+        shapes[1] = new Circle(5);
+        assertEquals( 25 + 25 * Math.PI, AreaCalculator.calculateArea(shapes), 0);
     }
 }

@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle implements Shape {
     private int width;
     private int height;
     public Rectangle(int width, int height) {
@@ -11,5 +11,10 @@ public class Rectangle {
     }
     public int getWidth() {
         return width;
+    }
+
+    @Override
+    public double getArea() {
+        return height * width;
     }
 }

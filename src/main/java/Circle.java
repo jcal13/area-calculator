@@ -1,4 +1,4 @@
-public class Circle {
+public class Circle implements Shape {
     private int radius;
 
     public Circle(int radius) {
@@ -7,5 +7,9 @@ public class Circle {
 
     public int getRadius() {
         return radius;
+    }
+
+    public double getArea() {
+        return Math.PI * Math.pow(radius, 2);
     }
 }
